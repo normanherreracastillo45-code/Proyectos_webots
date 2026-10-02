@@ -1,0 +1,217 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/SandyGround.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/road/protos/Road.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/Pavement.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/buildings/protos/Windmill.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/buildings/protos/SmallManor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/manhole/protos/SquareManhole.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/vehicles/protos/tesla/TeslaModel3Simple.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/trees/protos/Pine.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/trees/protos/Forest.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/dji/mavic/protos/Mavic2Pro.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/humans/pedestrian/protos/Pedestrian.proto"
+
+WorldInfo {
+  info [
+    "This demonstration shows a DJI Mavic 2 PRO flying over a rural area."
+    "After the drone has taken off, you can control it with the keyboard of your computer."
+  ]
+  title "DJI Mavic 2 PRO demo"
+  basicTimeStep 8
+  defaultDamping Damping {
+    linear 0.5
+    angular 0.5
+  }
+}
+Viewpoint {
+  orientation 0.062356183392901415 0.043080247506899004 -0.997123762963964 2.1711914105820607
+  position -26.27698359912123 34.9229441593959 6.901936147802017
+  near 0.2
+  followSmoothness 0.2
+}
+TexturedBackground {
+  luminosity 3
+}
+TexturedBackgroundLight {
+}
+Fluid {
+  translation -0.08 0.01 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.129412 0 0.870588
+        transparency 0.6
+      }
+      geometry Box {
+        size 400 400 4
+      }
+    }
+  ]
+}
+Pedestrian {
+  translation 0 128.54 1.27
+  name "pedestrian(2)"
+}
+Pedestrian {
+  translation 172.78 -188.19 1.27
+  name "pedestrian(3)"
+}
+Pedestrian {
+  translation -44.5 8.35 5.54
+  name "pedestrian(4)"
+}
+Pedestrian {
+  translation -40.19 3.91 2.6
+  name "pedestrian(1)"
+}
+TeslaModel3Simple {
+  translation -13.317 -1.4 0.841423
+  rotation -9.58979e-09 1 1.26251e-09 -2.8797953071795863
+  name "vehicle(1)"
+}
+Floor {
+  size 400 400
+  tileSize 6 6
+  appearance SandyGround {
+  }
+}
+Pedestrian {
+  translation 0 -14.74 10.8
+}
+Road {
+  translation -43.8 9.2 0.01
+  rotation 0 0 1 -0.3926996938995747
+  width 3
+  numberOfLanes 1
+  rightBorder FALSE
+  leftBorder FALSE
+  wayPoints [
+    0 0 0
+    100 0 0
+    200 200 0
+  ]
+  splineSubdivision 8
+  appearance Pavement {
+    type "black stone"
+  }
+}
+Windmill {
+  translation -43.8656 -19.8433 0
+  rotation -7.19228e-09 2.6842e-08 1 0.523601
+}
+Windmill {
+  translation -44.258 -27.3356 0
+  rotation -7.19228e-09 2.6842e-08 1 0.523601
+  name "windmill(1)"
+}
+Windmill {
+  translation -46.2448 30.573 0
+  rotation -7.19228e-09 2.6842e-08 1 0.523601
+  name "windmill(2)"
+}
+Windmill {
+  translation -38.75 23.4 0
+  name "windmill(3)"
+}
+SmallManor {
+  translation -50.35 11.25 0
+  rotation 0 0 -1 0.392394
+}
+SquareManhole {
+  translation 0 0 -0.03
+}
+TeslaModel3Simple {
+  translation -41.5139 4.34169 0.31
+  rotation 0 0 1 -0.2618053071795865
+}
+Pine {
+  translation -14.0083 -14.4828 0
+  rotation 0 0 1 2.61799
+}
+Pine {
+  translation -19.6195 -24.3783 0
+  rotation 0 0 1 2.87979
+  name "pine tree(1)"
+}
+Pine {
+  translation -22.0129 6.20205 0
+  name "pine tree(3)"
+}
+Pine {
+  translation -10.6926 -25.1339 0
+  name "pine tree(4)"
+}
+Pine {
+  translation -14.3441 14.5621 0
+  name "pine tree(5)"
+}
+Pine {
+  translation -26.6328 -7.1707 0
+  name "pine tree(6)"
+}
+Pine {
+  translation 0.493517 3.59638 0
+  rotation 0 0 1 -2.6179953071795863
+  name "pine tree(2)"
+}
+Forest {
+  translation 0 0 -0.01
+  shape [
+    200 200
+    200 0
+    50 0
+    50 50
+    -50 50
+    -50 -50
+    50 -50
+    50 0
+    200 0
+    200 -200
+    -200 -200
+    -200 200
+  ]
+  density 0.01
+  type "cherry tree"
+  randomSeed 1
+  maxHeight 12
+  minHeight 6
+  maxRadius 6
+  minRadius 3
+}
+Mavic2Pro {
+  hidden position_0_0 -1.6058905674378688e-09
+  hidden linearVelocity_0 -8.478143651393363e-07 -1.4012046264195946e-07 3.3132955196799785e-14
+  hidden angularVelocity_0 -2.666839671713691e-13 2.360817443264133e-13 -7.176915676956177e-08
+  hidden position_5_0 -1.2181261819133566e-09
+  hidden linearVelocity_5 -8.467281824488986e-07 -1.4904034074316376e-07 -2.291096308984306e-12
+  hidden angularVelocity_5 7.509344203174616e-10 1.4223402125105844e-10 -8.273551778350852e-08
+  hidden position_6_0 -4.390796156041491e-10
+  hidden linearVelocity_6 -8.463042037509584e-07 -1.4882866877795593e-07 1.963412371351987e-12
+  hidden angularVelocity_6 7.507156665129543e-10 1.4344866901596793e-10 -8.273551727388968e-08
+  hidden linearVelocity_7 -8.456121783231469e-07 -1.4880582635417372e-07 8.279270461410698e-12
+  hidden angularVelocity_7 1.066174898717186e-08 2.016744651488916e-09 -8.203234783418345e-08
+  translation -50.04140429019127 12.963842854492178 10.065748211155512
+  rotation 0.03262196689076159 -0.3481820009591996 0.9368591684368713 0.19931705443143338
+  name "Mavic 2 PRO(1)"
+  cameraSlot [
+    Camera {
+      recognitionColors [
+        0 0 0
+      ]
+      width 400
+      height 240
+      recognition Recognition {
+        frameColor 1 1 0
+      }
+    }
+  ]
+}
+SmallManor {
+  translation 1.5 -14.66 0
+  rotation 0 0 1 1.5708
+  name "small manor(1)"
+}
